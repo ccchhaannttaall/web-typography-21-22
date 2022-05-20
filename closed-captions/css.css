@@ -21,7 +21,7 @@ body{
 iframe{
 	grid-column-start: 2;
 	grid-row-start: 2;
-	clip-path: inset(4.8em 0);
+	clip-path: inset(4.2em 0);
 }
 
 
@@ -38,20 +38,41 @@ iframe{
 	transition: .2s;
 	opacity: 0;
 }
+
+
 .voice1 {
-	font-family: "Brenner Slab";
-	font-style: Normal;
-	font-weight: 400;
-	color: blue;
-
+	font-weight: bold;
+	color: purple;
+	font-size: 30px;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 2em;
+	letter-spacing: 4px;
+	overflow: hidden;
+	background: linear-gradient(10deg, #fff, green, #fff);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: animate linear infinite;
+	animation-duration: 3s;
+	animation-delay: .5s;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-.voice1::before{
-	content: "😡";
+@keyframes animate {
+	0% {
+		background-position: -300%;
+	}
+	100% {
+		background-position: 500%;
+	}
 }
+
+
 .voice2 {
 	font-weight: bold;
-	color: blue;
+	color: #ffa7db;
+	font-size: 30px;
 
 }
 
@@ -62,6 +83,7 @@ iframe{
 
 .voice3 {
 	color: darkcyan;
+	font-size: 30px;
 
 }
 
@@ -70,12 +92,20 @@ iframe{
 
 .voice4{
 	color:lightgray;
+	font-size: 30px;
 
 }
 
 .voice4::before{
 }
 
+.Computer{
+color: mediumpurple;
+}
+
+.Ourguy{
+color: navajowhite;
+}
 /* **********************************************
 The first paragraph, with extended timing for 
 	all siblings. Basically what it does is that
@@ -96,7 +126,7 @@ You probably want to change the styling.
 	transition: 0s;
 	font-weight: 200;
 	font-size: 30px;
-	color:darkblue;
+	color: #7976e2;
 
 
 }
@@ -174,7 +204,7 @@ You probably want to change the styling.
 	transition: 0s 3s;
 	font-family: "brenner Sans condensed";
 	font-size: 30px;
-	color:blue;
+	color: #a3a2ff;
 
 
 }
@@ -226,6 +256,7 @@ Sounds.
 }
 
 .sound3{
+	background: #5E5C5C;
 
 }
 
@@ -236,30 +267,58 @@ Sounds.
 }
 
 .sound4{
+	background-image: url('matrix.gif');
+	background-size: cover;
 
 }
 
 .sound5{
-
+	background: linear-gradient(-90deg, #000000, blue, blue, black, black);
+	background-size: 400% 400%;
+	transition: 0s;
+	animation: sound5 2s ease;
+	animation-fill-mode: forwards;
 }
 
+@keyframes sound5 {
+	50% {
+		background-position: 100% 50%;
+	}
+	75% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 50% 50%;
+		background-color: black;
+	}
+}
+
+
+
+
 .sound6{
+	background: #5E5C5C;
 
 }
 
 .sound7{
+	background: #5E5C5C;
 
 }
 
 .sound8{
+	background: #5E5C5C;
 
 }
 
 .sound9{
+	background: #5E5C5C;
 
 }
 
 .sound10{
+	background: #5E5C5C;
 
 }
 
