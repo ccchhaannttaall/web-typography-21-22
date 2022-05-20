@@ -49,7 +49,7 @@ iframe{
 	font-size: 2em;
 	letter-spacing: 4px;
 	overflow: hidden;
-	background: linear-gradient(10deg, #fff, green, #fff);
+	background: linear-gradient(10deg, #003e00, green, #ff0007);
 	background-repeat: no-repeat;
 	background-size: 80%;
 	animation: animate linear infinite;
@@ -71,27 +71,27 @@ iframe{
 
 .voice2 {
 	font-weight: bold;
-	color: #ffa7db;
+	color: #0007f4;
 	font-size: 30px;
-
 }
 
 .voice2::before{
 	content: "😐";
-
 }
 
 .voice3 {
-	color: darkcyan;
-	font-size: 30px;
-
+	font-family: "Brenner Mono";
+	font-style: Normal;
+	font-weight: 800;
+	font-size: 50px;
+	color: #ff0007;
 }
 
 .voice3::before{
 }
 
 .voice4{
-	color:lightgray;
+	color: #f80001;
 	font-size: 30px;
 
 }
@@ -99,12 +99,28 @@ iframe{
 .voice4::before{
 }
 
-.Computer{
-color: mediumpurple;
+.Computer {
+	color: #002c94;
+	font-size: 30px;
+	font-weight: bolder;
+	display: table; /* keep the background color wrapped tight */
+	margin: 5px auto 5px auto;
+	padding:5px;font-size:20px;background-color:green;color:#ffffff;
+}
+
+.Computer::before{
+	content: "👁";
+	color: #000000;
 }
 
 .Ourguy{
-color: navajowhite;
+color: #f80001;
+	font-size: 30px;
+	font-family: "Brenner Display Stencil Black ";
+}
+
+.Ourguy::before{
+	content: "😨";
 }
 /* **********************************************
 The first paragraph, with extended timing for 
@@ -174,7 +190,6 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s 1.4s;
 	margin-right: -.25em;
-	font-family: "brenner display";
 	font-size: 30px;
 	color:lightcyan;
 
@@ -230,7 +245,7 @@ You probably want to change the styling.
 	font-family: "Brenner Sans";
 	font-style: Normal;
 	font-weight: 800;
-	color:red;
+	color: #6d0000;
 	font-size: 50px;
 }
 
@@ -256,8 +271,8 @@ Sounds.
 }
 
 .sound3{
-	background: #5E5C5C;
-
+	background-image: url('matrix.gif');
+	background-size: cover;
 }
 
 .sound3{
@@ -267,9 +282,9 @@ Sounds.
 }
 
 .sound4{
-	background-image: url('matrix.gif');
-	background-size: cover;
-
+	background-image: url('circles.png');
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .sound5{
@@ -298,34 +313,58 @@ Sounds.
 
 
 .sound6{
-	background: #5E5C5C;
-
+	background: linear-gradient(-90deg, #000000, green, green, black, black);
+	background-size: 400% 400%;
+	transition: 0s;
+	animation: sound6 2s ease;
+	animation-fill-mode: forwards;
 }
+
+@keyframes sound6 {
+	50% {
+		background-position: 100% 50%;
+	}
+	75% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 50% 50%;
+		background-color: black;
+	}
+}
+
 
 .sound7{
-	background: #5E5C5C;
+	background: #5e4040;
+	animation: unset;
+	background-image: url('whitenoise.gif');
+	background-size: cover;
 
 }
 
-.sound8{
-	background: #5E5C5C;
-
+.sound8 {
+	animation: unset;
+	background-color: lightgrey;
 }
 
-.sound9{
-	background: #5E5C5C;
-
+.sound9 {
+	animation: unset;
+    background-color: #5E5C5C;
 }
-
-.sound10{
-	background: #5E5C5C;
-
+.sound10 {
+	background: #5e4040;
+	animation: unset;
+	background-image: url('giphy.gif');
+	background-size: cover;
 }
-
 
 iframe {
 	transition: 1s;
+	}
 }
+
+
 /* The moment the class .sound1 is added to the body, the movie makes a turn */
 .sound1 iframe {
 	transform: rotate(1turn);
